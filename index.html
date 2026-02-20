@@ -44,7 +44,8 @@ text-align:right;
 var password = prompt("Enter password");
 
 if(password !== "31/1/2026") {
-  document.body.innerHTML="Wrong password.";
+  // Remove everything so nothing else is visible or clickable
+  document.body.innerHTML = "<h1>Wrong password.</h1>";
 }
 </script>
 <div id="envelope" onclick="openLetter()">
