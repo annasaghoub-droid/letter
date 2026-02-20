@@ -40,12 +40,21 @@ text-align:right;
 </head>
 
 <body>
-<script>
-var password = prompt("Enter password");
+<body style="display:none;">
+<h1>Secret Page</h1>
+<p>Only visible after password</p>
 
-if(password !== "31/1/2026") {
-  document.body.innerHTML="Wrong password.";
+<script>
+var password = prompt("31/1/2026:");
+
+if (password === "31/1/2026") {
+    document.body.style.display = "block";
+} else {
+    alert("Incorrect password or cancelled!");
+    window.location.href = "https://example.com";
 }
+</script>
+</body>
 </script>
 <div id="envelope" onclick="openLetter()">
   💌 Open Envelope
