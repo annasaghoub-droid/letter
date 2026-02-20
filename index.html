@@ -39,7 +39,13 @@ body {
 </head>
 
 <body>
+<script>
+var password = prompt("Enter password");
 
+if(password !== "31/1/2026") {
+  document.body.innerHTML="Wrong password.";
+}
+</script>
 <div id="envelope" onclick="openLetter()">
   ✉️ Open Envelope
 </div>
