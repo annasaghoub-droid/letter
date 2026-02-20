@@ -43,10 +43,12 @@ text-align:right;
 <script>
 var password = prompt("Enter password");
 
-// If password is wrong or user clicked cancel
+// If password is wrong OR user clicked cancel (null)
 if(password !== "31/1/2026" || password === null) {
-  document.body.innerHTML = "<h1>Wrong password.</h1>";
+  // Redirect to a separate "Access Denied" page
+  window.location.href = "access-denied.html";
 }
+
 </script>
 <div id="envelope" onclick="openLetter()">
   💌 Open Envelope
