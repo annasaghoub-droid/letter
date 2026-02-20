@@ -15,8 +15,8 @@ body {
 }
 
 #envelope {
-  width:250px;
-  height:150px;
+  width:450px;
+  height:350px;
   background:#d8b4a0;
   cursor:pointer;
   display:flex;
@@ -58,16 +58,18 @@ Write your message here ❤️
 Anything you want.
 </p>
 
-<audio controls autoplay loop>
+<audio id="music" loop>
   <source src="Promise.mp3" type="audio/mpeg">
 </audio>
 
 </div>
 
 <script>
-function openLetter() {
-  document.getElementById("envelope").style.display="none";
-  document.getElementById("letter").style.display="block";
+function openLetter(){
+document.getElementById("envelope").style.display="none";
+document.getElementById("letter").style.display="block";
+
+document.getElementById("music").play();
 }
 </script>
 
