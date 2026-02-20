@@ -43,8 +43,8 @@ text-align:right;
 <script>
 var password = prompt("Enter password");
 
-if(password !== "31/1/2026") {
-  // Remove everything so nothing else is visible or clickable
+// If password is wrong or user clicked cancel
+if(password !== "31/1/2026" || password === null) {
   document.body.innerHTML = "<h1>Wrong password.</h1>";
 }
 </script>
