@@ -39,20 +39,25 @@ text-align:right;
 </style>
 </head>
 
-<body style="display:none;">
-<h1>Secret Page</h1>
-<p>Only visible after password</p>
+<body>
+  <div id="content" style="display:none;">
+    <!-- All your envelope, text, and audio here -->
+    <audio id="song" autoplay loop>
+      <source src="song.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-<script>
-var password = prompt("Enter Password:");
+  <script>
+  var password = prompt("Enter password:");
 
-if (password === "31/1/2026") {
-    document.body.style.display = "block";
-} else {
-    alert("Incorrect password or cancelled!");
-    window.location.href = "https://example.com";
-}
-</script>
+  if (password === "31/1/2026") {
+      // Show content
+      document.getElementById("content").style.display = "block";
+  } else {
+      alert("Incorrect password or cancelled!");
+      window.location.href = "https://example.com"; // redirect away
+  }
+
 <div id="envelope" onclick="openLetter()">
   💌 Open Envelope
 </div>
