@@ -26,25 +26,40 @@ body {
   font-size: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+
+#choices{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:650px;
+  height:450px;
+  background:#d8b4a0;
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
 }
 
-#letter {
-  display: none;
-  max-width: 800px;
-  background: white;
-  padding: 50px;
-  border-radius: 12px;
-  font-size: 28px;
-  text-align: right;
-  direction: rtl;
-  line-height: 1.9;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-  overflow-y: auto;
-  max-height: 90vh;
+#choices h1{
+  color:white;
+  font-size:45px;
+  margin-bottom:40px;
 }
 
-h2 {
-  text-align: center;
+.choice-btn{
+  width:300px;
+  padding:20px;
+  margin:15px;
+  font-size:28px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  background:white;
+  color:#8b5e4a;
+  transition:0.3s;
+}
+
+.choice-btn:hover{
+  transform:scale(1.05);
 }
 </style>
 </head>
@@ -67,69 +82,16 @@ if (password !== "31/1/2026") {
   <h1>Choose a page</h1>
 
   <button onclick="window.location.href='letter1.html'">
-    💌 First Letter
+    💌 What I've already said
   </button>
 
   <br><br>
 
   <button onclick="window.location.href='letter2.html'">
-    🌙 Second Letter
+    ✨ If we meet again
   </button>
 
-</div>
-<div id="letter">
 
-<h2>For you &lt;3</h2>
-
-<p>عزيزي يحيى،</p>
-
-<p>
-لم تكن لحظة واحدة حين قررت الكتابة عنك، لقد كنت تجول في خاطري منذ رأيتك لأول مرة.
-لازلت أبحث عن وجهك بين الوجوه، وعن اسمك بين الأسماء، وعن صوتك الذي بقي عالقاً في رأسي مثل أغنية لا أعرف كلماتها.
-</p>
-
-<p>
-رائع أني عرفتك! ولو كان لقاؤنا هو نفسه الوداع.
-يكفيني الآن أننا نقطن كوكباً واحداً وتشرق علينا شمس واحدة.
-أيها الغريب، كيف لك أن تملأ قلبي بكل هذه السعادة. رائع أني عرفتك!
-</p>
-
-<p>
-لدي الكثير لأقوله لك، لقد كنت بداخلي طوال الوقت، في خيالي، في بدني، في يديّ،
-ووددت لو أنني أستطيع الاحتفاظ بك إلى الأبد.
-</p>
-
-<p>
-لست أدري إن كان قدر آخر سيجمعنا، ولكنني متأكدة من شيء واحد على الأقل،
-هو أثرك في نفسي.
-</p>
-
-<p>
-ليتك تكون معي، تأكل معي، تجلس معي، تغفو وتصحو معي.
-أتخيلك دائماً تمشي معي، وحين أرى مشهداً أو تخطر ببالي فكرة،
-أريدك بجانبي، واقفاً إلى جواري ويدك في يدي.
-</p>
-
-<p>
-أكتب إليك وأنا على يقين بأن هذه الكلمات لن تعني لك ما تعنيه لي،
-ولكن لا مفر من كتابتها، فقد همت فيك وفاض الشوق بقلبي وأفكاري وأغرقها.
-</p>
-
-<p>
-أنت لست لي، ولن تكون أبداً، لكنني لازلت أرغب بك كثيراً.
-أفكر فيك باستمرار.
-</p>
-
-<p>
-مع حبي،<br>
-آنا.
-</p>
-
-<audio id="music" loop>
-  <source src="Promise.mp3" type="audio/mpeg">
-</audio>
-
-</div>
 
 <script>
 function openEnvelope(){
