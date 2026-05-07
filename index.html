@@ -59,10 +59,24 @@ if (password !== "31/1/2026") {
 }
 </script>
 
-<div id="envelope" onclick="openLetter()">
+<div id="envelope" onclick="openEnvelope()">
   💌 Open Envelope
 </div>
+<div id="choices" style="display:none; text-align:center;">
 
+  <h1>Choose a page</h1>
+
+  <button onclick="window.location.href='letter1.html'">
+    💌 First Letter
+  </button>
+
+  <br><br>
+
+  <button onclick="window.location.href='letter2.html'">
+    🌙 Second Letter
+  </button>
+
+</div>
 <div id="letter">
 
 <h2>For you &lt;3</h2>
@@ -118,11 +132,13 @@ if (password !== "31/1/2026") {
 </div>
 
 <script>
-function openLetter() {
-  document.getElementById("envelope").style.display = "none";
-  document.getElementById("letter").style.display = "block";
+function openEnvelope(){
 
-  document.getElementById("music").play();
+  // hide envelope
+  document.getElementById("envelope").style.display="none";
+
+  // show choices
+  document.getElementById("choices").style.display="block";
 }
 </script>
 
