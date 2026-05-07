@@ -79,11 +79,15 @@ body{
 آنا.
 </p>
 
-<audio id="music" loop>
+<audio id="music" loop controls autoplay>
   <source src="Promise.mp3" type="audio/mpeg">
 </audio>
 
-</div>
+<script>
+window.onload = function () {
+  document.getElementById("music").play();
+}
+</script>
 
 </body>
 </html>
