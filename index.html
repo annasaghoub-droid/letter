@@ -1,75 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <title>For You</title>
 
 <style>
 body {
-  background:#f5efe6;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  font-family:Georgia, serif;
+  background: #f5efe6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Georgia, serif;
+  margin: 0;
 }
 
 #envelope {
-  width:650px;
-  height:450px;
-  background:#d8b4a0;
-  cursor:pointer;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:40px;
-  border-radius:12px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+  width: 650px;
+  height: 450px;
+  background: #d8b4a0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
-#letter{
-display:none;
-max-width:800px;
-background:white;
-padding:50px;
-border-radius:12px;
-font-size:34px;
-text-align:right;
+#letter {
+  display: none;
+  max-width: 800px;
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  font-size: 28px;
+  text-align: right;
+  direction: rtl;
+  line-height: 1.9;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+h2 {
+  text-align: center;
 }
 </style>
 </head>
 
 <body>
+
 <script>
 var password = prompt("Enter password");
 
-// If password is wrong OR user clicked cancel (null)
-if(password !== "31/1/2026" || password === null) {
-  // Redirect to a separate "Access Denied" page
+if (password !== "31/1/2026") {
   window.location.href = "access-denied.html";
 }
-
 </script>
+
 <div id="envelope" onclick="openLetter()">
   💌 Open Envelope
 </div>
 
 <div id="letter">
-<h2>For you <3</h2>
+
+<h2>For you &lt;3</h2>
+
+<p>عزيزي يحيى،</p>
 
 <p>
-<p>عزيزي يحيى،<p>
-<p>لم تكن لحظة واحدة حين قررت الكتابة عنك، لقد كنت تجول في خاطري منذ رأيتك لأول مرة. لازلت ابحث عن وجهك بين الوجوه، وعن أسمك بين الأسامي، وعن صوتك الذي بقي  عالقاً في رأسي مثل أغنية لا أعرف كلماتها.<p>
-<p>رائع أني عرفتك! ولو كان لقائنا هو نفسه الوداع. يكفيني الآن أننا نقطن كوكباً واحداً وتشرق علينا شمس واحدة. أيها الغريب، كيف لك أن تملأ قلبي بكل هذه السعادة. رائع أني عرفتك!<p>
-<p>لدي الكثير لأقوله لك، لقد كنت بداخلي طوال الوقت، في خيالي، في بدني، في يديّ، و وددت لو أنني أستطيع الاحتفاظ بك إلى الأبد. <p>
-<p>لست أدري ان كان قدر آخر سيجمعنا، ولكنني متأكدة من شيء واحد على الأقل، هو أثرك في نفسي. أيها الغريب، إن لي قدرة لم امتلك مثلها من قبل على تصوّرك ورؤيتك، أنا لم أفقد صوابي بك بعد، ولذلك فأنا أملك الجرأة لاقول كل هذا لك، كل ما بداخلي يريدك بشراهة، أرغب بك كثيراً، ولو تعلم كم تزعجني هذه المسافة التي نالت منّا. <p>
-<p>ليتك تكون معي، تأكل معي، تجلس معي، تغفو وتصحو معي. أتخيلك دائماً تمشي معي، وحين أرى مشهداً او تخطر ببالي فكرة، أريدك بجانبي، واقفاً إلى جواري ويدك في يدي. <p>
-<p>اكتب إليك وانا على يقين بأن هذه الكلمات لن تعني لك ما تعنيه لي، ولكن لا مفر من كتابتها، فقد همت فيك وفاض الشوق بقلبي وأفكاري وأغرقها. <p>
-<p>انت لست لي، ولن تكون أبداً، لكنني لازلت أرغب بك كثيراً. أفكر فيك باستمرار، ابق كما انت، او كما رسمتك في خيالي. ليتك تعرف كم أحزن لعدم اجتماعنا في صورة أو حتى في أمنية. آسفة فقط لأن الحياه لم تمنحني الفرصة لتقبيل عينيك واحتضانك، آسفة لكل الأشياء التي كان بالإمكان ان نقوم بها سوياً، ولم نفعل. ابق كما انت، وسأبقى كما أنا، أريدك جداً وأعرف تماماً كم منالك مستحيل. <p>
+لم تكن لحظة واحدة حين قررت الكتابة عنك، لقد كنت تجول في خاطري منذ رأيتك لأول مرة.
+لازلت أبحث عن وجهك بين الوجوه، وعن اسمك بين الأسماء، وعن صوتك الذي بقي عالقاً في رأسي مثل أغنية لا أعرف كلماتها.
+</p>
 
-<p>مع حبي،<p>
-<p>آنا. <p>
-</xp>
+<p>
+رائع أني عرفتك! ولو كان لقاؤنا هو نفسه الوداع.
+يكفيني الآن أننا نقطن كوكباً واحداً وتشرق علينا شمس واحدة.
+أيها الغريب، كيف لك أن تملأ قلبي بكل هذه السعادة. رائع أني عرفتك!
+</p>
+
+<p>
+لدي الكثير لأقوله لك، لقد كنت بداخلي طوال الوقت، في خيالي، في بدني، في يديّ،
+ووددت لو أنني أستطيع الاحتفاظ بك إلى الأبد.
+</p>
+
+<p>
+لست أدري إن كان قدر آخر سيجمعنا، ولكنني متأكدة من شيء واحد على الأقل،
+هو أثرك في نفسي.
+</p>
+
+<p>
+ليتك تكون معي، تأكل معي، تجلس معي، تغفو وتصحو معي.
+أتخيلك دائماً تمشي معي، وحين أرى مشهداً أو تخطر ببالي فكرة،
+أريدك بجانبي، واقفاً إلى جواري ويدك في يدي.
+</p>
+
+<p>
+أكتب إليك وأنا على يقين بأن هذه الكلمات لن تعني لك ما تعنيه لي،
+ولكن لا مفر من كتابتها، فقد همت فيك وفاض الشوق بقلبي وأفكاري وأغرقها.
+</p>
+
+<p>
+أنت لست لي، ولن تكون أبداً، لكنني لازلت أرغب بك كثيراً.
+أفكر فيك باستمرار.
+</p>
+
+<p>
+مع حبي،<br>
+آنا.
+</p>
 
 <audio id="music" loop>
   <source src="Promise.mp3" type="audio/mpeg">
@@ -78,11 +118,11 @@ if(password !== "31/1/2026" || password === null) {
 </div>
 
 <script>
-function openLetter(){
-document.getElementById("envelope").style.display="none";
-document.getElementById("letter").style.display="block";
+function openLetter() {
+  document.getElementById("envelope").style.display = "none";
+  document.getElementById("letter").style.display = "block";
 
-document.getElementById("music").play();
+  document.getElementById("music").play();
 }
 </script>
 
