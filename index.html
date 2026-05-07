@@ -30,12 +30,19 @@ body {
 
 #choices{
   display:none;
+  position:fixed;
+  top:0;
+  left:0;
   width:100vw;
   height:100vh;
   background:#d8b4a0;
+
+  display:none;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+
+  z-index:999;
 }
 
 #choices h1{
@@ -45,7 +52,7 @@ body {
 }
 
 .choice-btn{
-  width:400px;
+  width:420px;
   padding:25px;
   margin:20px;
   font-size:32px;
@@ -76,30 +83,23 @@ if (password !== "31/1/2026") {
 <div id="envelope" onclick="openEnvelope()">
   💌 Open Envelope
 </div>
-<div id="choices" style="display:none; text-align:center;">
 
+<div id="choices">
   <h1>Choose a page</h1>
 
-  <button onclick="window.location.href='letter1.html'">
-    💌 What I've already said
+  <button class="choice-btn" onclick="window.location.href='letter1.html'">
+    💌 First letter
   </button>
 
-  <br><br>
-
-  <button onclick="window.location.href='letter2.html'">
-    ✨ If we meet again
+  <button class="choice-btn" onclick="window.location.href='letter2.html'">
+    ✨ Yet another
   </button>
-
-
+</div>
 
 <script>
 function openEnvelope(){
-
-  // hide envelope
   document.getElementById("envelope").style.display="none";
-
-  // show choices
-  document.getElementById("choices").style.display="block";
+  document.getElementById("choices").style.display="flex";
 }
 </script>
 
