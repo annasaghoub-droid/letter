@@ -76,8 +76,20 @@ function typeWriter() {
 
 window.onload = function () {
   typeWriter();
-  document.getElementById("music").play();
+  document.getElementById("music").music.play().catch(() => {
+
+    // fallback: wait for user interaction
+
+    document.body.addEventListener("click", () => {
+
+      music.play();
+
+    }, { once: true });
+
+  });
+
 };
+
 </script>
 
 </body>
