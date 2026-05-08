@@ -45,11 +45,6 @@ body{
 
 </div>
   
-<script>
-window.onload = function () {
-  document.getElementById("music").play();
-}
-</script>
 
 <script>
 const text = `عزيزي يحيى،
@@ -67,18 +62,24 @@ const text = `عزيزي يحيى،
 let i = 0;
 
 function typeWriter() {
+
   if (i < text.length) {
+
     document.getElementById("letterText").innerHTML += text.charAt(i);
+
     i++;
-    setTimeout(typeWriter, 40); // speed (lower = faster)
+
+    setTimeout(typeWriter, 40);
+
   }
+
 }
 
-window.onload = function () {
-  typeWriter();
-  document.getElementById("music").music.play().catch(() => {
+function startMusic() {
 
-    // fallback: wait for user interaction
+  const music = document.getElementById("music");
+
+  music.play().catch(() => {
 
     document.body.addEventListener("click", () => {
 
@@ -87,6 +88,14 @@ window.onload = function () {
     }, { once: true });
 
   });
+
+}
+
+window.onload = function () {
+
+  typeWriter();
+
+  startMusic();
 
 };
 
