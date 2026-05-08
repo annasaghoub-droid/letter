@@ -50,11 +50,23 @@ First, this is an all time favourite of mine which I think you’ll enjoy!
 The song you’re hearing is actually from the movie.
 </p>
 
-<audio controls autoplay loop>
+<audio id="music" loop>
   <source src="FallingSlowly.mp3" type="audio/mpeg">
 </audio>
 
 </div>
+  
+<script>
+window.onload = function () {
+  const music = document.getElementById("music");
 
+  music.play().catch(() => {
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+};
+</script>
+  
 </body>
 </html>
