@@ -79,23 +79,31 @@ function startMusic() {
 
   const music = document.getElementById("music");
 
-  music.play().catch(() => {
+  music.currentTime = 0;
 
-    document.body.addEventListener("click", () => {
+  const playPromise = music.play();
 
-      music.play();
+  if (playPromise !== undefined) {
 
-    }, { once: true });
+    playPromise.catch(() => {
 
-  });
+      document.body.addEventListener("click", () => {
+
+        music.play();
+
+      }, { once: true });
+
+    });
+
+  }
 
 }
 
 window.onload = function () {
 
-  typeWriter();
-
   startMusic();
+
+  typeWriter();
 
 };
 
